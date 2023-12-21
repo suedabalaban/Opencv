@@ -9,7 +9,7 @@ while True:
     frame = cv2.resize(frame,(512,512))
     grey = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-    cats = cat.detectMultiScale(grey, 1.1, 2, minSize = (32,32))
+    cats = cat.detectMultiScale(grey, 1.1, 2, minSize = (30,30))
 
     cat_crop = []
 
