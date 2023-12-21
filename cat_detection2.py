@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture("source/cat/cat.mp4")
+cap = cv2.VideoCapture("source/cat/cat2.mp4")
 cat = cv2.CascadeClassifier("source/cat/cat.xml")
 
 
