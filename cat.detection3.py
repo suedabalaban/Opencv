@@ -1,15 +1,15 @@
 import cv2
 
-cap = cv2.VideoCapture("source/cat/cat.mp4")
+cap = cv2.VideoCapture(0)
 cat = cv2.CascadeClassifier("source/cat/cat.xml")
 
 
 while True:
     ret, frame = cap.read()
-    frame = cv2.resize(frame,(512,512))
+    frame = cv2.flip(frame,1)
     grey = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-    cats = cat.detectMultiScale(grey, 1.1, 2, minSize = (32,32))
+    cats = cat.detectMultiScale(grey, 1.1, 2, minSize = (30,30))
 
     cat_crop = []
 
