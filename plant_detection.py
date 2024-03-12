@@ -6,14 +6,12 @@ import math
 
 cap = cv2.VideoCapture(0)
 
-cap = cv2.VideoCapture(0)
 model = YOLO("best.pt")
 
 while True:
     ret, frame = cap.read()
     frame = cv2.flip(frame,1)
 
-    model = YOLO("best.pt")
     results = model(frame)
 
     for r in results:
