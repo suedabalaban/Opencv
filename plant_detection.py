@@ -1,6 +1,5 @@
 import cv2
 from ultralytics import YOLO
-
 import cvzone
 import math
 
@@ -27,7 +26,6 @@ while True:
             conf = math.ceil((box.conf[0]*100))/100
 
             cls = box.cls[0]
-
 
     cv2.imshow("frame", frame)
 
